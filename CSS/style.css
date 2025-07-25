@@ -1,0 +1,138 @@
+@import url('https://fonts.cdnfonts.com/css/ds-digital');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DS-Digital", sans-serif;
+    /* font-family: sans-serif; */
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("../Images/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    min-height: 100vh;
+}
+
+/* --------------------------------------------------------- */
+
+/*  #  =================== Main Code =================== # */
+.clock_header {
+    background: darkgray;
+    width: fit-content;
+    align-items: center;
+    /* width: 400px; */
+    width: fit-content;
+    height: fit-content;
+    border-radius: 15px;
+    border: 10px solid gray;
+    padding: 20px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.handle {
+    height: 35px;
+    width: 45px;
+    background: darkgray;
+}
+
+.footer {
+    height: 25px;
+    border-radius: 10px 10px 0px 0px;
+    width: 200px;
+    background: gray;
+    justify-content: center;
+}
+
+.table {
+    background: rgba(119, 67, 36, 0.4);
+    backdrop-filter: blur(4px);
+    width: 500px;
+    height: 30px;
+}
+
+.main-clock {
+    background: darkslategrey;
+    font-size: 65px;
+    color: limegreen;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0px 5px;
+    width: fit-content;
+}
+
+.dblDot {
+    animation: animate 1s infinite;
+}
+
+.clockText {
+    font-family:  sans-serif;
+    font-weight: 600;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.date {
+    display: flex;
+    gap: 5px;
+}
+
+.bottomDiv {
+    background-color: midnightblue;
+    color: cyan;
+    padding: 3px 13px;
+}
+
+/* * ----------------------- Responsive Design ----------------------- * */
+
+@media screen and (max-width: 530px) {
+    .mainBody {
+        transform: scale(0.8);
+    }
+
+    .table {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .mainBody {
+        transform: scale(0.7);
+    }
+}
+
+/* ! -=-=-=-=-=-=-=-=-=-= Animation -=-=-=-=-=-=-=-=-=-= ! */
+
+@keyframes animate {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    50% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
